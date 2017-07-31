@@ -1,0 +1,17 @@
+"*":
+  core:
+    closeDeletedFileTabs: true
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontSize: 12
+    tabType: "soft"
+  "exception-reporting":
+    userId: "952e6a6b-5191-4356-8485-fd16c78b9e03"
+  fonts:
+    fontFamily: "Fira Mono"
+  welcome:
+    showOnStartup: false
