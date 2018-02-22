@@ -8,6 +8,7 @@
 (package-initialize)
 
 ;; Default configuration for auto-complete
+;; M-x package-install RET auto-complete
 (ac-config-default)
 
 ;; Show column position
@@ -41,6 +42,7 @@
 ;; (x-focus-frame nil)
 
 ;; Add 80 line limit line
+;; M-x package-install RET fill-column-indicator
 (require 'fill-column-indicator)
 (setq fci-rule-width 1)
 (setq fci-rule-color "#F7CB4D")
