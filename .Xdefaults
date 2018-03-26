@@ -23,14 +23,20 @@ URxvt.internalBorder:       10
 ! Tabs
 ! How to customize tabs: http://forums.debian.net/viewtopic.php?f=16&t=53495
 ! Perl extension: http://jbl.web.cern.ch/jbl/doc/urxvt/
-URxvt.perl-ext-common:      default,tabbed
+URxvt.perl-ext-common:      default,tabbedex
 URxvt.tabbed.tabbar-fg:     12
 URxvt.tabbed.tabbar-bg:     -1
 URxvt.tabbed.tab-fg: 	    10
 URxvt.tabbed.tab-bg: 	    -1
 URxvt.tabbed.autohide:      true
-URxvt.tabbed.new-button:    false
+URxvt.tabbed.new-button:    true
 URxvt.tabbed.title: 	    true
+URxvt.keysym.Control-t:                 perl:tabbedex:new_tab
+URxvt.keysym.Control-Tab:               perl:tabbedex:next_tab
+URxvt.keysym.Control-Shift-Tab:         perl:tabbedex:prev_tab
+URxvt.keysym.Control-Shift-Left:        perl:tabbedex:move_tab_left
+URxvt.keysym.Control-Shift-Right:       perl:tabbedex:move_tab_right
+URxvt.keysym.Control-Shift-R:       perl:tabbedex:renmae_tab
 
 ! Colors
 URxvt.background: 	    rgba:0000/0000/0000/e800
