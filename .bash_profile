@@ -8,7 +8,7 @@ if [ -e $DOTFILES_HOME/.bash_aliases ]; then
 fi
 
 if [ -e ~/.bash_aliases ]; then
-    source ~/.bash_aliases
+   source ~/.bash_aliases
 fi
 
 export CLICOLOR=1

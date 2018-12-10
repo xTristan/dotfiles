@@ -102,6 +102,19 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Install all the CORP stuff. This has to be done after corp login
+if [ -e $CORP_DOTFILES_HOME/.corp_bash_profile ]; then
+    source $CORP_DOTFILES_HOME/.corp_bash_profile
+fi
+
+if [ -e $CORP_DOTFILES_HOME/.corp_bashrc ]; then
+    source $CORP_DOTFILES_HOME/.corp_bashrc
+fi 
+
+if [ -e $CORP_DOTFILES_HOME/.corp_bash_aliaes ]; then
+    source $CORP_DOTFILES_HOME/.corp_bash_aliases
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
