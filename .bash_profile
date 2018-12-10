@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # prepare github folder
-export GIT_HOME="$HOME/Workspaces/github/"
-export DOTFILES_HOME="$GIT_HOME/dotfiles"
+export DOTFILES_HOME="$HOME/dotfiles"
 
 if [ -e $DOTFILES_HOME/.bash_aliases ]; then
     source $DOTFILES_HOME/.bash_aliases
