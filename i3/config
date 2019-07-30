@@ -175,7 +175,7 @@ bindsym $mod+r mode "resize"
 # }
 
 # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 
 gaps inner 10
 gaps outer 5
@@ -183,9 +183,9 @@ gaps outer 5
 
 # Theme colors
 # class                 border  backgr. text    indic.  child_border
-client.focused          #0099ff #b7895d #87d7ff #0099ff #0080ff
-client.focused_inactive #000000 #000000 #16A085 #454948
-client.unfocused        #434745 #000000 #16A085 #454948
+client.focused          #0099ff #b7895d #87d7ff #0099ff #FF5722
+client.focused_inactive #000000 #000000 #16A085 #454948 #9E9E9E
+client.unfocused        #434745 #000000 #16A085 #454948 #9E9E9E
 client.urgent           #CB4B16 #FDF6E3 #16A085 #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 
