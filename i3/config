@@ -182,6 +182,7 @@ for_window [class=".*"] border pixel 2
 
 gaps inner 10
 gaps outer 5
+
 # workspace <ws> gaps [inner|outer|horizontal|vertical|top|left|bottom|right] 50px
 
 # Theme colors

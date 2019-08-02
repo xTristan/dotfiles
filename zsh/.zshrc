@@ -19,9 +19,11 @@ BULLETTRAIN_PROMPT_ORDER=(
 )
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME=agnoster
+
 # What to show in the begin of prompt
-# Will show directory, permission, git branch and status
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs)
+# Will show context, 1directory, permission
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable)
  
 # What to show in the tail of prompt
 # Will show command status and time
