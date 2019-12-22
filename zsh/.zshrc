@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/usr/local/google/home/jianl/.oh-my-zsh
+export ZSH="${HOME}/.oh-my-zsh"
 export TERM="xterm-256color"
 export PATH="${PATH}:${HOME}/.local/bin/"
 
