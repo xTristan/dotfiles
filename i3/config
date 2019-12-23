@@ -191,7 +191,7 @@ gaps outer 5
 
 # Theme colors
 # class                 border  backgr. text    indic.  child_border
-client.focused		#0099ff #b7895d #87d7ff #0099ff #FF5722
+client.focused	        #0099ff #b7895d #87d7ff #0099ff #FF5722
 client.focused_inactive #000000 #000000 #16A085 #454948 #9E9E9E
 client.unfocused        #434745 #000000 #16A085 #454948 #9E9E9E
 client.urgent           #CB4B16 #FDF6E3 #16A085 #268BD2
