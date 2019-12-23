@@ -346,6 +346,9 @@ workspace 4 output DP-0
 workspace 5 output HDMI-0
 
 ## This will be different from station to station, may need to move to .profile
-xrandr --output DP-0 --primary
-xrandr --output DP-0 --right-of HDMI-0
+# xrandr --output DP-0 --primary
+# xrandr --output DP-0 --right-of HDMI-0
 # xrandr --output HDMI-0 --rotate left 
+
+## Set up wallpaper
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/Fabric_by_Just_Jeanette.jpg

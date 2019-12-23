@@ -87,7 +87,7 @@ export PRIVATE_DOTFILES_HOME="$HOME/dotfiles"
 export CORP_DOTFILES_HOME="/google/data/rw/users/ji/jianl/www/private/dotfiles"
 
 source $ZSH/oh-my-zsh.sh
-source /etc/bash_completion.d/g4d
+# source /etc/bash_completion.d/g4d
 
 if [ -e $PRIVATE_DOTFILES_HOME/.bash_aliases ]; then
     source $PRIVATE_DOTFILES_HOME/.bash_aliases
