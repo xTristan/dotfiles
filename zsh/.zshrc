@@ -104,6 +104,12 @@ fi
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 
+# Update multi-monitor orientation
+# xrandr --output DP-0 --primary
+# xrandr --output DP-0 --right-of HDMI-0
+# xrandr --output HDMI-0 --rotate left
+# i3-msg reload
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
