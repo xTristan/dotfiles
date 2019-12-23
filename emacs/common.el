@@ -9,6 +9,7 @@
 
 ;; Default configuration for auto-complete
 ;; M-x package-install RET auto-complete
+(require 'auto-complete)
 (ac-config-default)
 
 ;; Show column position
@@ -52,6 +53,7 @@
 (add-hook 'python-mode-hook 'fci-mode)
 (add-hook 'sh-mode-hook 'fci-mode)
 
-(require 'compilation-colorization) ;; colorizes output of (i)grep
+
+;; (require 'compilation-colorization) ;; colorizes output of (i)grep
 
 (load-theme 'tango-dark)
