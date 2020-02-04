@@ -104,6 +104,9 @@ fi
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 
+# Background
+# feh --bg-fill ~/Pictures/Wallpapers/salcantayperu_by_Life_Nomadic.jpg
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
