@@ -203,7 +203,7 @@ client.background       #2B2C2B
 # #0099FF: bright blue
 
 # Only supported in resloved/i3 shape branches
-border_radius 12
+# border_radius 12
 
 set $mode_gaps Gaps: (o)uter, (i)nner, (h)orizontal, (v)ertical, (t)op, (r)ight, (b)ottom, (l)eft
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
