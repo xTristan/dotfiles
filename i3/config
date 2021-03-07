@@ -36,7 +36,7 @@ bindsym $mod+Return exec tilix # i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # better lock screen with blurred desktop background
-bindsym $mod+Shift+x exec ~/.local/bin/betterlockscreen -l blur -r 3440x1440 -t "TxT"
+bindsym $mod+Shift+x exec ~/.local/bin/betterlockscreen -l blur -r 3440x1440 -t "XXY"
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run

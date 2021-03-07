@@ -5,7 +5,7 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(package-initialize)
+;; (package-initialize)
 
 ;; Default configuration for auto-complete
 ;; M-x package-install RET auto-complete
@@ -21,7 +21,7 @@
 ;; Disable startup message
 (setq inhibit-startup-screen t)
 ;; Font
-(set-default-font "Droid Sans Mono-9")
+(set-frame-font "Droid Sans Mono-9")
 ;; Highlight selection
 (transient-mark-mode t)
 ;; Selection
