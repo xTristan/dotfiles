@@ -350,7 +350,7 @@ workspace 9 output primary
 # exec_always "xrandr --output DP-0 --primary --right-of HDMI-0 --output HDMI-0 --rotate left"
 
 ## Set up wallpaper
-exec_always "feh --bg-fill ~/Pictures/Wallpapers/Blue_box_number_2_by_orb9220.jpg"
+exec_always "feh --bg-fill ~/Pictures/Wallpapers/Blue_Pond.jpg"
 
 # Alternative (set last used background)
 # exec --no-startup-id source ~/.fehbg
