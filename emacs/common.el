@@ -15,9 +15,9 @@
 ;; Show column position
 (setq column-number-mode t)
 ;; Show line number
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
 ;; Show a separator between line number and content
-(setq linum-format "%4d \u2502 ")
+;;(setq linum-format "%4d \u2502 ")
 ;; Disable startup message
 (setq inhibit-startup-screen t)
 ;; Font
@@ -44,15 +44,16 @@
 
 ;; Add 80 line limit line
 ;; M-x package-install RET fill-column-indicator
-(require 'fill-column-indicator)
-(setq fci-rule-width 1)
-(setq fci-rule-color "#F7CB4D")
-(setq fci-rule-column 80)
-(add-hook 'c++-mode-hook 'fci-mode)
-(add-hook 'js-mode-hook 'fci-mode)
-(add-hook 'python-mode-hook 'fci-mode)
-(add-hook 'sh-mode-hook 'fci-mode)
-
+;; (require 'fill-column-indicator)
+;; (setq fci-rule-width 1)
+;; (setq fci-rule-color "#F7CB4D")
+;; (setq fci-rule-column 80)
+;; (add-hook 'c++-mode-hook 'fci-mode)
+;; (add-hook 'js-mode-hook 'fci-mode)
+;; (add-hook 'python-mode-hook 'fci-mode)
+;; (add-hook 'sh-mode-hook 'fci-mode)
+(setq-default display-fill-column-indicator-mode 79)
+(global-display-fill-column-indicator-mode 1)
 
 ;; (require 'compilation-colorization) ;; colorizes output of (i)grep
 
