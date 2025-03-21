@@ -172,15 +172,15 @@ shift-down = ['volume set 0', 'mode main']
 
 [workspace-to-monitor-force-assignment]
   0 = 'secondary' #
-  1 = 'main' # 
-  2 = 'main' # 
-  3 = 'main' # 
-  4 = 'main' # 
-  5 = 'main' # 
-  6 = 'main' # 
-  7 = 'main' # 
-  8 = 'main' # 
-  9 = 'main' # 
+  1 = 'main' # Chat and Gmail, and occassionally Calendar PWA apps
+  2 = 'main' # Primary workspace
+  3 = 'main' # Primary workspace
+  4 = 'main' # Primary workspace 
+  5 = 'main' # Terminal
+  6 = 'main' # Secondary tasks
+  7 = 'main' # Secondary tasks
+  8 = 'main' # Secondary tasks
+  9 = 'main' # Personal (email, music)
 
 [[on-window-detected]]
   if.app-id = 'com.tinyspeck.slackmacgap'
@@ -188,10 +188,14 @@ shift-down = ['volume set 0', 'mode main']
 
 [[on-window-detected]]
   if.app-name-regex-substring = '^Google\sChat'
-  run = ['move-node-to-workspace 7']
+  run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
   if.app-name-regex-substring = '^Gmail'
+  run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+  if.app-id = 'com.googlecode.iterm2'
   run = ['move-node-to-workspace 7']
 
 [[on-window-detected]]
