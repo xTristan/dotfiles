@@ -145,7 +145,8 @@ alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-alt-f = 'fullscreen'
+# Ctrl instead of Alt to avoid conflicting with meta key in emacs.
+ctrl-f = 'fullscreen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
@@ -171,7 +172,7 @@ up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
 
 [workspace-to-monitor-force-assignment]
-  0 = 'secondary' #
+  0 = 'secondary' # Secondary screen for parallel viewing with primary.
   1 = 'main' # Chat and Gmail, and occassionally Calendar PWA apps
   2 = 'main' # Primary workspace
   3 = 'main' # Primary workspace
