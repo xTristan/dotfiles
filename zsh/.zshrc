@@ -34,7 +34,6 @@ BULLETTRAIN_PROMPT_ORDER=(
 )
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-#ZSH_THEME=agnoster
 
 # What to show in the begin of prompt
 # Will show context, 1directory, permission
@@ -118,6 +117,12 @@ if [ -e $CORP_DOTFILES_HOME/.corp_bashrc ]; then
     source $CORP_DOTFILES_HOME/.corp_bashrc
 fi
 
+# (TODO) merge this into corp zshrc
+source /etc/bash_completion.d/hgd
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Background
@@ -154,3 +159,7 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+work() { tmx2 new-session -A -s ${1:-work}; }
