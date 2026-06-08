@@ -98,10 +98,16 @@ alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
+alt-j = 'focus left'
+alt-k = 'focus down'
+alt-i = 'focus up'
 alt-l = 'focus right'
+
+# alt-left = 'focus left'
+# alt-down = 'focus down'
+# alt-up = 'focus up'
+# alt-right = 'focus right'
+
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-cmd-left = 'move left'
@@ -179,7 +185,7 @@ shift-down = ['volume set 0', 'mode main']
   4 = 'main' # Primary workspace 
   5 = 'main' # Terminal
   6 = 'main' # Secondary tasks
-  7 = 'main' # Secondary tasks
+  7 = 'secondary' # Secondary tasks
   8 = 'main' # Secondary tasks
   9 = 'main' # Personal (email, music)
 
@@ -189,11 +195,11 @@ shift-down = ['volume set 0', 'mode main']
 
 [[on-window-detected]]
   if.app-name-regex-substring = '^Google\sChat'
-  run = ['move-node-to-workspace 1']
+  run = ['move-node-to-workspace 0']
 
 [[on-window-detected]]
   if.app-name-regex-substring = '^Gmail'
-  run = ['move-node-to-workspace 1']
+  run = ['move-node-to-workspace 0']
 
 [[on-window-detected]]
   if.app-id = 'com.googlecode.iterm2'
