@@ -206,6 +206,10 @@ shift-down = ['volume set 0', 'mode main']
   run = ['move-node-to-workspace 7']
 
 [[on-window-detected]]
+  if.app-id = 'com.mitchellh.ghostty'
+  run = ['move-node-to-workspace 7']
+
+[[on-window-detected]]
   if.window-title-regex-substring = 'Jian Lu - Outlook'
   run = ['move-node-to-workspace 7']
 

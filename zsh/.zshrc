@@ -118,7 +118,9 @@ if [ -e $CORP_DOTFILES_HOME/.corp_bashrc ]; then
 fi
 
 # (TODO) merge this into corp zshrc
-source /etc/bash_completion.d/hgd
+if [ -e /etc/bash_completion.d/hgd ]; then
+    source /etc/bash_completion.d/hgd
+fi
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
