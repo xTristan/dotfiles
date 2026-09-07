@@ -166,3 +166,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 work() { tmx2 new-session -A -s ${1:-work}; }
 
+
+# Added by Antigravity
+export PATH="/Users/jianl/.antigravity/antigravity/bin:$PATH"
