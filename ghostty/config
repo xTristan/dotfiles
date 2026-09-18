@@ -1,0 +1,4 @@
+# Ghostty configuration
+
+# Increase spacing between lines (adds ~15% extra height to each cell)
+adjust-cell-height = 15%
