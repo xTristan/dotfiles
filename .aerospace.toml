@@ -189,7 +189,7 @@ shift-down = ['volume set 0', 'mode main']
   5 = 'main' # Primary workspaces - Default for new browser page.
   6 = 'main' # Background task parking lot, such as long running Plx queries, Calendars. 
   7 = ['built-in', 'main'] # Personal (email, music). If Mac is open, use that, otherwise default back to main.
-  8 = 1     # Background Agents, Assign to portrait display if connected.
+  8 = 1      # Background Agents, Assign to portrait display if connected.
   9 = 'built-in'      # Terminals, Assign to built-in (taking up smallest screen real estate)
   0 = [1, 'built-in'] # Chat and Gmail. If Mac is open, use that, otherwise default back to portrait display.
 
@@ -222,7 +222,7 @@ shift-down = ['volume set 0', 'mode main']
 # Browsing
 [[on-window-detected]]
   if.app-name-regex-substring = '^Google Chrome'
-  run = ['move-node-to-workspace 5']
+  run = ['move-node-to-workspace 4']
 
 # Terminals (workspace 7)
 [[on-window-detected]]
