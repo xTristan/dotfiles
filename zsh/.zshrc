@@ -10,28 +10,19 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="${HOME}/.oh-my-zsh"
-export TERM="xterm-256color"
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        source "$BASE16_SHELL/profile_helper.sh"
-        
-base16_decaf
+if [ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ]; then
+    source "$BASE16_SHELL/profile_helper.sh"
+    command -v base16_decaf >/dev/null && base16_decaf
+fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="bullet-train"
-
-BULLETTRAIN_PROMPT_ORDER=(
-  git
-  context
-  dir
-  time
-)
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -97,25 +88,28 @@ plugins=(
   git
 )
 
+export EDITOR="emacs -nw"
+
+HISTSIZE=100000
+SAVEHIST=100000
+setopt HIST_IGNORE_DUPS SHARE_HISTORY
+
 # Dotfiles root
-export PRIVATE_DOTFILES_HOME="$HOME/dotfiles"
+export DOTFILES_HOME="$HOME/dotfiles"
+export PRIVATE_DOTFILES_HOME="$DOTFILES_HOME"
 export CORP_DOTFILES_HOME="/google/data/rw/users/ji/jianl/www/private/dotfiles"
 
 source $ZSH/oh-my-zsh.sh
 # source /etc/bash_completion.d/g4d
 
-if [ -e $PRIVATE_DOTFILES_HOME/.bash_aliases ]; then
-    source $PRIVATE_DOTFILES_HOME/.bash_aliases
-fi
+[ -e "$PRIVATE_DOTFILES_HOME/.bash_aliases" ] && source "$PRIVATE_DOTFILES_HOME/.bash_aliases"
 
-if [ -e $CORP_DOTFILES_HOME/.corp_bash_aliases ]; then
-    source $CORP_DOTFILES_HOME/.corp_bash_aliases
-    ln -s -f $CORP_DOTFILES_HOME/.corp_bash_aliases ~/.bash_aliases
-fi
+# Corp config (only exists on work machines)
+[ -e "$CORP_DOTFILES_HOME/.corp_bash_aliases" ] && source "$CORP_DOTFILES_HOME/.corp_bash_aliases"
+[ -e "$CORP_DOTFILES_HOME/.corp_bashrc" ] && source "$CORP_DOTFILES_HOME/.corp_bashrc"
 
-if [ -e $CORP_DOTFILES_HOME/.corp_bashrc ]; then
-    source $CORP_DOTFILES_HOME/.corp_bashrc
-fi
+# Machine-local overrides (not tracked)
+[ -e ~/.zshrc.local ] && source ~/.zshrc.local
 
 # (TODO) merge this into corp zshrc
 if [ -e /etc/bash_completion.d/hgd ]; then
@@ -123,7 +117,7 @@ if [ -e /etc/bash_completion.d/hgd ]; then
 fi
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+command -v fzf >/dev/null && source <(fzf --zsh)
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 
@@ -168,4 +162,4 @@ work() { tmx2 new-session -A -s ${1:-work}; }
 
 
 # Added by Antigravity
-export PATH="/Users/jianl/.antigravity/antigravity/bin:$PATH"
+[ -d "$HOME/.antigravity/antigravity/bin" ] && export PATH="$HOME/.antigravity/antigravity/bin:$PATH"

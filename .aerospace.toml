@@ -193,7 +193,7 @@ shift-down = ['volume set 0', 'mode main']
   9 = [1, 'main']               # Secondary browsing - Prioritized reading and browsing related to primary workspace tasks. 
   0 = [1, 'built-in']           # Chat and Gmail. If Mac is open, use that, otherwise default back to portrait display.
 
-# Comms Apps (workspace 0 and 8)
+# Comms Apps (workspace 0); Calendar goes to the background workspace 8
 [[on-window-detected]]
   if.app-id = 'com.tinyspeck.slackmacgap'
   run = ['move-node-to-workspace 0']
@@ -224,7 +224,7 @@ shift-down = ['volume set 0', 'mode main']
   if.app-name-regex-substring = '^Google Chrome'
   run = ['move-node-to-workspace 4']
 
-# Terminals (workspace 7)
+# Terminals (workspace 8)
 [[on-window-detected]]
   if.app-id = 'com.googlecode.iterm2'
   run = ['move-node-to-workspace 8']
