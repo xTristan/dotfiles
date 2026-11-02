@@ -2,4 +2,4 @@
 (package-initialize)
 
 ;; load common settings
-(load-file "~/.emacs.d/common.el")
+(load-file (expand-file-name "common.el" user-emacs-directory))

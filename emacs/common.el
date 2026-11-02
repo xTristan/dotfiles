@@ -5,12 +5,12 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-;; (package-initialize)
+;; (package-initialize) is called in ~/.emacs
 
 ;; Default configuration for auto-complete
 ;; M-x package-install RET auto-complete
-(require 'auto-complete)
-(ac-config-default)
+(when (require 'auto-complete nil 'noerror)
+  (ac-config-default))
 
 ;; Show column position
 (setq column-number-mode t)
@@ -25,7 +25,7 @@
 ;; Highlight selection
 (transient-mark-mode t)
 ;; Selection
-(setq x-select-enable-clipboard t)
+(setq select-enable-clipboard t)
 ;; Use tab instead of spaces
 (setq-default indent-tabs-mode nil)
 ;; turn off electric-indent-mode:
@@ -52,7 +52,7 @@
 ;; (add-hook 'js-mode-hook 'fci-mode)
 ;; (add-hook 'python-mode-hook 'fci-mode)
 ;; (add-hook 'sh-mode-hook 'fci-mode)
-(setq-default display-fill-column-indicator-mode 79)
+(setq-default fill-column 79)
 (global-display-fill-column-indicator-mode 1)
 
 ;; (require 'compilation-colorization) ;; colorizes output of (i)grep

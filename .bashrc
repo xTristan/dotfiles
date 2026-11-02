@@ -10,14 +10,14 @@ esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth:erasedups
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -103,16 +103,10 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Install all the CORP stuff. This has to be done after corp login
-if [ -e $CORP_DOTFILES_HOME/.corp_bash_profile ]; then
-    source $CORP_DOTFILES_HOME/.corp_bash_profile
-fi
-
-if [ -e $CORP_DOTFILES_HOME/.corp_bashrc ]; then
-    source $CORP_DOTFILES_HOME/.corp_bashrc
-fi 
-
-if [ -e $CORP_DOTFILES_HOME/.corp_bash_aliaes ]; then
-    source $CORP_DOTFILES_HOME/.corp_bash_aliases
+if [ -n "$CORP_DOTFILES_HOME" ]; then
+    for f in .corp_bash_profile .corp_bashrc .corp_bash_aliases; do
+        [ -e "$CORP_DOTFILES_HOME/$f" ] && . "$CORP_DOTFILES_HOME/$f"
+    done
 fi
 
 # enable programmable completion features (you don't need to enable
